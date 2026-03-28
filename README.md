@@ -17,7 +17,7 @@ To achieve high-precision results, the project followed an iterative development
 
 ### Performance Metrics
 
-**Accuracy (R² Score): 90.1%** The model successfully explains over 90% of the variance in insurance premiums. In healthcare financial forecasting, this level of accuracy is considered a professional standard for reliability.
+**Accuracy (R² Score): 90%** The model successfully explains over 90% of the variance in insurance premiums. In healthcare financial forecasting, this level of accuracy is considered a professional standard for reliability.
 
 **Mean Absolute Error (MAE): ~$2,100** On average, the predicted premium deviates by only $2,100 from the actual cost. This is a narrow margin considering individual premiums in the dataset can exceed $60,000.
 
@@ -49,4 +49,4 @@ To achieve high-precision results, the project followed an iterative development
 
 > **Project Status:** Deployment Ready  
 > **Version:** 1.1 (XGBoost Optimized)  
-> **Final Accuracy:** 90.1%
+> **Final Accuracy:** 90%
