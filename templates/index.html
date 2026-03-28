@@ -2,47 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Medical Insurance Premium Predictor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Premium Predictor</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="container">
-        <div class="card input-card">
+        <div class="card">
             <div class="menu-dots">⋮</div>
-            <h1>Medical Insurance Premium Predictor</h1>
+            <h1>Insurance Premium Predictor</h1>
+            
             <form action="/predict" method="post">
-                <div class="form-row">
-                    <div class="field">
-                        <label>Customer Age</label>
-                        <input type="number" name="age" placeholder="e.g. 28" required>
-                    </div>
-                    <div class="field">
-                        <label>BMI (Body Mass Index)</label>
-                        <input type="number" step="0.1" name="bmi" placeholder="e.g. 24.5" required>
-                    </div>
+                <div class="field">
+                    <label>Customer Age</label>
+                    <input type="number" name="age" placeholder="e.g. 28" required>
                 </div>
-                <div class="form-row">
-                    <div class="field">
-                        <label>Gender</label>
-                        <select name="gender" required>
-                            <option value="" disabled selected>Select</option>
-                            <option value="1">Male</option>
-                            <option value="0">Female</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <label>Smoker Status</label>
-                        <select name="smoker" required>
-                            <option value="" disabled selected>Select</option>
-                            <option value="1">Yes</option>
-                            <option value="0">No</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <label>Dependents</label>
-                        <input type="number" name="children" placeholder="0" required>
-                    </div>
+
+                <div class="field">
+                    <label>
+                        BMI (Body Mass Index) 
+                        <span class="info-icon" title="BMI = weight(kg) / height(m)²">ⓘ</span>
+                    </label>
+                    <input type="number" step="0.1" name="bmi" placeholder="e.g. 24.5" required>
                 </div>
+
+                <div class="field">
+                    <label>Biological Gender</label>
+                    <select name="gender" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">Male</option>
+                        <option value="0">Female</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Smoker Status</label>
+                    <select name="smoker" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">Yes, I smoke</option>
+                        <option value="0">No, I do not smoke</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Dependents (Children)</label>
+                    <input type="number" name="children" placeholder="0" required>
+                </div>
+
+                <div class="field">
+                    <label>Residential Region</label>
+                    <select name="region" required>
+                        <option value="" disabled selected>Select Region</option>
+                        <option value="northeast">Northeast</option>
+                        <option value="northwest">Northwest</option>
+                        <option value="southeast">Southeast</option>
+                        <option value="southwest">Southwest</option>
+                    </select>
+                </div>
+                
                 <button type="submit" class="main-btn">Generate Prediction</button>
             </form>
         </div>
@@ -51,7 +68,7 @@
         <div class="card result-card">
             <p>Estimated Annual Premium</p>
             <h2>{{ prediction_text }}</h2>
-            <a href="/" class="reset-btn">Calculate New Quote</a>
+            <a href="/" class="reset-link">Calculate New Quote</a>
         </div>
         {% endif %}
     </div>
