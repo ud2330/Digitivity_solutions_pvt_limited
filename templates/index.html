@@ -2,31 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insurance Estimator</title>
+    <title>Medical Insurance Premium Predictor</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="main-container">
-        
+    <div class="container">
         <div class="card input-card">
-            <div class="dots">⋮</div>
-            <h1>Medical Cost Estimator</h1>
-
+            <div class="menu-dots">⋮</div>
+            <h1>Medical Insurance Premium Predictor</h1>
             <form action="/predict" method="post">
-                <div class="row">
-                    <div class="group">
-                        <label>Age</label>
-                        <input type="number" name="age" placeholder="e.g. 25" required>
+                <div class="form-row">
+                    <div class="field">
+                        <label>Customer Age</label>
+                        <input type="number" name="age" placeholder="e.g. 28" required>
                     </div>
-                    <div class="group">
-                        <label>BMI</label>
-                        <input type="number" step="0.1" name="bmi" placeholder="e.g. 22.5" required>
+                    <div class="field">
+                        <label>BMI (Body Mass Index)</label>
+                        <input type="number" step="0.1" name="bmi" placeholder="e.g. 24.5" required>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="group">
+                <div class="form-row">
+                    <div class="field">
                         <label>Gender</label>
                         <select name="gender" required>
                             <option value="" disabled selected>Select</option>
@@ -34,21 +30,20 @@
                             <option value="0">Female</option>
                         </select>
                     </div>
-                    <div class="group">
-                        <label>Smoker</label>
+                    <div class="field">
+                        <label>Smoker Status</label>
                         <select name="smoker" required>
                             <option value="" disabled selected>Select</option>
                             <option value="1">Yes</option>
                             <option value="0">No</option>
                         </select>
                     </div>
-                    <div class="group">
+                    <div class="field">
                         <label>Dependents</label>
                         <input type="number" name="children" placeholder="0" required>
                     </div>
                 </div>
-
-                <button type="submit" class="calc-btn">Generate Prediction</button>
+                <button type="submit" class="main-btn">Generate Prediction</button>
             </form>
         </div>
 
@@ -56,9 +51,9 @@
         <div class="card result-card">
             <p>Estimated Annual Premium</p>
             <h2>{{ prediction_text }}</h2>
+            <a href="/" class="reset-btn">Calculate New Quote</a>
         </div>
         {% endif %}
-
     </div>
 </body>
 </html>
