@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #4b4b5a 0%, #d48e8e 50%, #f7d7d7 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between the two boxes */
+}
+
+/* Base Card Style */
+.card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: relative;
+    padding: 30px 50px;
+}
+
+/* Main Input Card - Wide and Short */
+.input-card {
+    width: 90%;
+    max-width: 750px;
+}
+
+/* Result Card - Separate and Smaller */
+.result-card {
+    width: 100%;
+    max-width: 450px; /* Narrower than the top box */
+    padding: 20px;
+    text-align: center;
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dots {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #ccc;
+    font-size: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px 15px;
+    background: #f1f3f6;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.calc-btn {
+    width: 100%;
+    padding: 15px;
+    background: #4b4b5a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Prediction Text Styles */
+.result-card p {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.result-card h2 {
+    color: #4b4b5a;
+    font-size: 36px;
+    font-weight: 800;
+}
