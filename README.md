@@ -10,8 +10,8 @@ This project provides a machine learning solution to estimate annual medical ins
 ### Model Evolution & Optimization
 To achieve high-precision results, the project followed an iterative development process:
 
-* **Baseline Model (Random Forest):** Our initial implementation reached an accuracy of **88.0%**. This validated the feature set but showed limitations in capturing the non-linear cost spikes associated with high-risk profiles.
-* **Optimized Model (XGBoost):** By transitioning to Gradient Boosting (XGBoost) and performing hyperparameter tuning, we improved the accuracy to **~90.1%**. This final model is significantly more robust against outliers and provides more reliable estimates for complex cases.
+* **Baseline Model (Random Forest):** Initial implementation reached an accuracy of **88.0%**. This validated the feature set but showed limitations in capturing the non-linear cost spikes associated with high-risk profiles.
+* **Optimized Model (XGBoost):** By transitioning to Gradient Boosting (XGBoost) and performing hyperparameter tuning, improved the accuracy to **~90.1%**. This final model is significantly more robust against outliers and provides more reliable estimates for complex cases.
 
 ---
 
