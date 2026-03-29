@@ -3,7 +3,7 @@
 # Health Insurance Premium Predictor
 
 ### Project Overview
-This project provides a machine learning solution to estimate annual medical insurance premiums. By analyzing key demographic and lifestyle factors—such as age, BMI, and smoking status—the engine provides an immediate, data-driven cost estimate. This tool is designed to bridge the gap between complex actuarial data and user-friendly financial planning.
+This project provides a machine learning solution to estimate annual medical insurance premiums. By analyzing key demographic and lifestyle factors such as age, BMI, and smoking status—the engine provides an immediate, data-driven cost estimate. This tool is designed to bridge the gap between complex actuarial data and user-friendly financial planning.
 
 **Dataset Source** -  The model is trained using the Medical Cost Personal Dataset obtained from Kaggle.
 
@@ -13,7 +13,7 @@ This project provides a machine learning solution to estimate annual medical ins
 To achieve high-precision results, the project followed an iterative development process:
 
 * **Baseline Model (Random Forest):** Initial implementation reached an accuracy of **88.0%**. This validated the feature set but showed limitations in capturing the non-linear cost spikes associated with high-risk profiles.
-* **Optimized Model (XGBoost):** By transitioning to Gradient Boosting (XGBoost) and performing hyperparameter tuning, improved the accuracy to **~90.1%**. This final model is significantly more robust against outliers and provides more reliable estimates for complex cases.
+* **Optimized Model (XGBoost):** By transitioning to Gradient Boosting (XGBoost) and performing hyperparameter tuning, improved the accuracy to **~90%**. This final model is significantly more robust against outliers and provides more reliable estimates for complex cases.
 
 ---
 
