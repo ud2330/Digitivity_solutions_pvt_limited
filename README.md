@@ -5,6 +5,9 @@
 ### Project Overview
 This project provides a machine learning solution to estimate annual medical insurance premiums. By analyzing key demographic and lifestyle factors—such as age, BMI, and smoking status—the engine provides an immediate, data-driven cost estimate. This tool is designed to bridge the gap between complex actuarial data and user-friendly financial planning.
 
+Dataset Source
+The model is trained using the Medical Cost Personal Dataset obtained from Kaggle.
+
 ---
 
 ### Model Evolution & Optimization
