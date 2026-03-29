@@ -47,6 +47,8 @@ To achieve high-precision results, the project followed an iterative development
 
 ---  
 > **Final Accuracy:** 90%
+
 > **Live Demo:**
+
 You can access the live web application here:
 https://medical-insurance-premium-predictor-70oe.onrender.com
