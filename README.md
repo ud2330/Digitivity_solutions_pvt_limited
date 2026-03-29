@@ -45,8 +45,5 @@ To achieve high-precision results, the project followed an iterative development
 3. Install dependencies: `pip install -r requirements.txt`.
 4. Run the application: `python app.py`.
 
----
-
-> **Project Status:** Deployment Ready  
-> **Version:** 1.1 (XGBoost Optimized)  
+---  
 > **Final Accuracy:** 90%
